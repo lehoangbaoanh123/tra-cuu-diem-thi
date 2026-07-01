@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Điểm Thi | THPT Nguyễn Trãi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <main class="container">
+        <div class="card main-card">
+            <header>
+                <h1>TRA CỨU ĐIỂM THI</h1>
+                <p class="subtitle">Nhập Số Báo Danh của bạn để xem điểm</p>
+            </header>
+
+            <section class="search-section">
+                <div class="input-group">
+                    <input type="text" id="sbdInput" placeholder="VD: 01096712" maxlength="8" autocomplete="off">
+                    <button id="searchBtn">Tra Cứu</button>
+                </div>
+                <div id="errorMsg" class="error-msg hidden"></div>
+            </section>
+
+            <section id="resultSection" class="result-section hidden">
+                <!-- Loading -->
+                <div id="loading" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Đang tải dữ liệu...</p>
+                </div>
+                
+                <!-- Result Data -->
+                <div id="resultData" class="result-data hidden">
+                    <div class="student-info">
+                        <h2>Thông tin thí sinh</h2>
+                        <div class="info-row">
+                            <span class="label">Số Báo Danh:</span>
+                            <span id="resSBD" class="value highlight"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Hội đồng thi:</span>
+                            <span id="resSGD" class="value"></span>
+                        </div>
+                    </div>
+
+                    <div class="scores-wrapper">
+                        <h2>Bảng Điểm</h2>
+                        <div id="scoreGrid" class="score-grid">
+                            <!-- Score cards injected here by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <img src="logo.png" alt="Logo THPT Nguyễn Trãi" class="footer-logo">
+                <p class="author-name">Lê Hoàng Bảo Anh</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
